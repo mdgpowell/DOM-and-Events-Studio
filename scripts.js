@@ -1,7 +1,7 @@
 // Write your JavaScript code here.
 // Remember to pay attention to page loading!
 // console.log(window)
-console.dir(document);
+//console.dir(document);
 
 window.addEventListener("load", function() {
     let takeoff = document.getElementById("takeoff");
@@ -28,4 +28,26 @@ window.addEventListener("load", function() {
             document.getElementById("spaceShuttleHeight").innerHTML = 0;
        }
     }); 
+    let upButton = document.getElementById("up");
+    let downButton = document.getElementById("down");
+    let leftButton = document.getElementById("left");
+    let rightButton = document.getElementById("right");
+
+    let shuttle = document.getElementById("rocket");
+    let shuttleHeight = document.getElementById("spaceShuttleHeight");
+
+    upButton.addEventListener("click", function() {
+        shuttle.style.top -= 10;
+        shuttleHeight.innerHTML = Number(shuttleHeight.innerHTML) + 10000 
+    });
+    downButton.addEventListener("click", function() {
+        shuttle.style.top += 10;
+        shuttleHeight.innerHTML = Number(shuttleHeight.innerHTML) - 10000 
+    });
+    leftButton.addEventListener("click", function() {
+        shuttle.style.left -= 10; 
+    });
+    rightButton.addEventListener("click", function() {
+        shuttle.style.left += 10;
+    });
 });
