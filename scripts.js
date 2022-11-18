@@ -1,7 +1,9 @@
 // Write your JavaScript code here.
 // Remember to pay attention to page loading!
 // console.log(window)
-console.dir(document);
+//console.dir(document);
+
+// test
 
 window.addEventListener("load", function() {
     let takeoff = document.getElementById("takeoff");
