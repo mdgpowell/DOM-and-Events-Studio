@@ -35,19 +35,25 @@ window.addEventListener("load", function() {
 
     let shuttle = document.getElementById("rocket");
     let shuttleHeight = document.getElementById("spaceShuttleHeight");
+    let altitude = 0;
+    let left = 200;
 
     upButton.addEventListener("click", function() {
-        shuttle.style.top -= 10;
+        altitude += 10;
+        shuttle.style.bottom = `${altitude}px`;
         shuttleHeight.innerHTML = Number(shuttleHeight.innerHTML) + 10000 
     });
     downButton.addEventListener("click", function() {
-        shuttle.style.top += 10;
+        altitude -= 10;
+        shuttle.style.bottom = `${altitude}px`;
         shuttleHeight.innerHTML = Number(shuttleHeight.innerHTML) - 10000 
     });
     leftButton.addEventListener("click", function() {
-        shuttle.style.left -= 10; 
+        left -= 10;
+        shuttle.style.left = `${left}px`; 
     });
     rightButton.addEventListener("click", function() {
-        shuttle.style.left += 10;
+        left += 10;
+        shuttle.style.left = `${left}px`;
     });
 });
