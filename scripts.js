@@ -6,6 +6,11 @@ console.dir(document);
 window.addEventListener("load", function() {
     let takeoff = document.getElementById("takeoff");
     takeoff.addEventListener("click", function() {
-        window.confirm("Confirm that the shuttle is ready for takeoff.");
+        if (window.confirm("Confirm that the shuttle is ready for takeoff.")) {
+            document.getElementById("flightStatus").innerHTML = "Shuttle in flight";
+            document.getElementById("shuttleBackground").style.backgroundColor = "blue";
+            document.getElementById("spaceShuttleHeight").innerHTML = Number(document.getElementById("spaceShuttleHeight").innerHTML)+10000;
+            
+        }
     });
 });
